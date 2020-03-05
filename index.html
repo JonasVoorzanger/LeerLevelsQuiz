@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LLQuiz with jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="LLQuiz.css"/>
+<script type="text/javascript" src="https://codeassign.github.io/markjax/dist/markjax.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+<!-- <script>window.texme = { style: 'none' }</script>
+<script src="https://cdn.jsdelivr.net/npm/texme@0.7.0"></script> -->
+</head>
+<body>
+
+<div id="landing-stage" class="jumbotron text-center">
+	<h1>Welkom bij de LeerLevels quiz-pagina!</h1>
+	<p>Kies hieronder de quiz die je wilt doen.</p>
+	<div>
+		<select id="Quiz-selection" class="form-control input-sm">
+			<option>Eerste</option>
+			<option>Tweede</option>
+			<option>Derde</option>
+		</select>
+	</div>
+	<div><br><button class="btn btn-primary" id="Select-button">Start</button></div>
+</div>
+
+<div id="quiz-stage" class="jumbotron text-center">
+	<h2 id="Quiz-title">dummy-title</h2>
+	<p id="Quiz-description"></p>
+	<button class="btn btn-primary" id="Start-button">Start</button>
+</div>
+
+<div id="question-stage" class="container">
+	<div class="container p-3">		
+		<p id="Question">dummy-question</p>
+	</div>
+	<div class="container" id="Answers">dummy-answers</div>
+	<div class="container mt-3">
+		<button class="btn btn-primary" id="Next-button">Volgende vraag</button>
+	</div>
+	
+</div>
+
+<div id="summary-stage">
+	<div class="jumbotron text-center">
+		<h1>Samenvatting</h1>
+		<p>Mooi verhaaltje</p>
+	</div>
+	<div class="container">
+		<p>Lijst met leerdoelen waar je fouten in had, met links naar relevante uitleg enzo</p>
+	</div>
+</div>
+
+<script src="LLQuizData.js"></script>
+<script src="LLQuiz.js"></script>
+<script type="text/javascript">
+	$(function(){
+		hideAll()
+		setGlobals()
+		addStuff()
+		setStage(stage)
+});
+</script>
+<!-- <script>
+// Warning before leaving the page (back button, or outgoinglink)
+window.onbeforeunload = function() {
+   return "";
+};
+</script> -->
+</body>
+</html>
+

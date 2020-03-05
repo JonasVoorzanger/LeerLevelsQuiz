@@ -1,0 +1,20 @@
+.feedback, .explanation{
+	color: gray;
+}
+
+.answer:hover {
+  background-color: WhiteSmoke;
+  cursor: pointer;
+}
+
+.no-hover{
+	cursor: none;
+}
+
+/*li *:empty{
+  display: none;
+}*/
+
+.mathjax{
+  margin: 0;
+}
